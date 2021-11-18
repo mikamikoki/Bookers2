@@ -21,12 +21,12 @@
 
 <div class="row">
   <% if @user.id == current_user.id %>
-  <%= link_to '', edit_user_path(user), class: "btn btn-outline-secondary btn-block fas fa-user-cog" %>
+  <%= link_to '', edit_user_path(@user), class: "btn btn-outline-secondary btn-block fas fa-user-cog" %>
   <% end %>
 </div>
 
 
-<%= form_with model:book, local:true do |f| %>
+<%= form_with model:@book, local:true do |f| %>
 <h2 class="mt-3">New book</h2>
 
 <div class="form-group">
@@ -43,6 +43,3 @@
 </p>
 <% end %>
     </div>
-   </div>
-  </div>
-</main>

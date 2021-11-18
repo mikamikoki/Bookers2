@@ -8,7 +8,5 @@ Rails.application.routes.draw do
   post 'users' => 'users#create'
   resources :users, only: [:show, :edit, :update, :create]
   patch 'users/:id' => 'user#update', as: 'update_user'
-  get 'books' => 'books#index'
-
 end
 
