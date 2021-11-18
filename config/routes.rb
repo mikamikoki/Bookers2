@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :users
   get 'homes/about'
   post 'users' => 'users#create'
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :create]
+  patch 'users/:id' => 'user#update', as: 'update_user'
+  get 'books' => 'books#index'
 
 end
+
